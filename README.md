@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Method definition
+### handleSave
+
+ The handleSave function is responsible for updating the state of the radioButtonStates variable in the parent component, ButtonGroup. It is passed down as a prop to the child component, RadioButtonGroup, so that the child can communicate with its parent.
+
+Here's a breakdown of what the handleSave function does:
+
+It takes in four parameters: id, name, value, and textInputValue.
+
+id is a unique identifier for the child component that is calling the function.
+name is the name of the radio button that was clicked in the child component.
+value is the value of the radio button that was clicked in the child component.
+textInputValue is the value of the text input field in the child component.
+It updates the state of the radioButtonStates variable in the parent component using the setRadioButtonStates function.
+
+It first uses the spread operator (...prevState) to copy the previous state of the radioButtonStates object.
+It then creates a new object with the updated state for the child component that called the function.
+It does this by using the id parameter as the key for the child component's state in the radioButtonStates object.
+It checks if the child component's state already exists in the radioButtonStates object using the prevState[id]?.option1 syntax. If it does, it keeps the existing state; if it doesn't, it sets the state to an empty string.
+It then updates the state for the radio button that was clicked by setting the name property of the state object to the value parameter.
+It also sets the textInputValue property of the state object to the textInputValue parameter.
+It sets the updated state using the setRadioButtonStates function.
+
+In summary, the handleSave function is responsible for updating the state of the radioButtonStates object in the parent component with the state of the child component that called the function. It uses the id parameter as the key for the child component's state in the radioButtonStates object and updates the state for the radio button that was clicked and the text input value.

@@ -40,11 +40,12 @@ export default function Parent() {
 
     return (
         <div>
-            <div className="button-container">
-                <button onClick={handleAddChild}>Add</button>
-                <button onClick={handleSaveAll}>Save</button>
-            </div>
+            <h1>Parent</h1>
             <div className="radio-group-container">{renderChildren()}</div>
+            <div className="button-container">
+                <button className="add-button" onClick={handleAddChild}>Add</button>
+                <button className="save-button" onClick={handleSaveAll}>Save</button>
+            </div>
         </div>
     );
 }

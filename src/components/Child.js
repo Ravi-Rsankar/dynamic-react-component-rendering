@@ -26,39 +26,42 @@ export default function Child(props) {
     };
 
     return (
-        <div className="radio-group">
-            <div className="radio">
-                <label>
-                    <input
-                        type="radio"
-                        value="option1"
-                        checked={selectedOption1 === "option1"}
-                        onChange={handleOption1Change}
-                    />
-                    Option 1
-                </label>
-            </div>
-            <div className="radio">
-                <label>
-                    <input
-                        type="radio"
-                        value="option2"
-                        checked={selectedOption2 === "option2"}
-                        onChange={handleOption2Change}
-                    />
-                    Option 2
-                </label>
-            </div>
-            <div className="radio">
-                <label>
-                    <input
-                        type="radio"
-                        value="option3"
-                        checked={selectedOption3 === "option3"}
-                        onChange={handleOption3Change}
-                    />
-                    Option 3
-                </label>
+        <div className="component-group">
+            <div className="child-title">Child</div>
+            <div className="radio-group">
+                <div className="radio">
+                    <label>
+                        <input
+                            type="radio"
+                            value="option1"
+                            checked={selectedOption1 === "option1"}
+                            onChange={handleOption1Change}
+                        />
+                        Option 1
+                    </label>
+                </div>
+                <div className="radio">
+                    <label>
+                        <input
+                            type="radio"
+                            value="option2"
+                            checked={selectedOption2 === "option2"}
+                            onChange={handleOption2Change}
+                        />
+                        Option 2
+                    </label>
+                </div>
+                <div className="radio">
+                    <label>
+                        <input
+                            type="radio"
+                            value="option3"
+                            checked={selectedOption3 === "option3"}
+                            onChange={handleOption3Change}
+                        />
+                        Option 3
+                    </label>
+                </div>
             </div>
             <div className="text-input">
                 <label>
